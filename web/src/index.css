@@ -1,0 +1,48 @@
+:root {
+  /* Monochrome shell + Industrial Amber for actionable intelligence only (see cockpit plan) */
+  --charcoal-1000: #0e1013;
+  --charcoal-950: #12151a;
+  --charcoal-900: #1a1e24;
+  --charcoal-850: #22262e;
+  --charcoal-800: #2a2f38;
+  --mist: #d8dee8;
+  --mist-muted: #9aa3b0;
+  --industrial-amber: #e8941c;
+  --industrial-amber-dim: #b87312;
+  --au-lait: #e6e9ef;
+
+  --titan-bg: var(--charcoal-1000);
+  --titan-surface: var(--charcoal-950);
+  --titan-zinc: var(--charcoal-850);
+  --titan-fog: color-mix(in srgb, var(--mist) 90%, #000);
+  --titan-divider: rgba(255, 255, 255, 0.075);
+  --titan-shadow: 0 16px 40px -20px rgba(0, 0, 0, 0.65);
+
+  /* Chrome / secondary UI (not amber) */
+  --titan-primary: var(--mist-muted);
+  --titan-primary-dim: #6d7580;
+  /* Actionable: primary buttons, conflict rail, score, Executed */
+  --titan-amber: var(--industrial-amber);
+  --titan-olive: var(--mist-muted);
+  --titan-olive-dim: #5c6370;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: "Google Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-weight: 400;
+  background: radial-gradient(120% 80% at 50% -10%, var(--charcoal-900) 0%, var(--titan-bg) 55%);
+  color: var(--titan-fog);
+}

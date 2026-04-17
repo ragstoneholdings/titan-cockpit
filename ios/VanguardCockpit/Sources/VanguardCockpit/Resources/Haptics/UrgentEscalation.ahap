@@ -1,0 +1,36 @@
+{
+  "Version": 1.0,
+  "Metadata": { "Project": "Vanguard", "Created": "2026-04-16" },
+  "Pattern": [
+    {
+      "Event": {
+        "Time": 0.0,
+        "EventType": "HapticTransient",
+        "EventParameters": [
+          { "ParameterID": "HapticIntensity", "ParameterValue": 1.0 },
+          { "ParameterID": "HapticSharpness", "ParameterValue": 0.95 }
+        ]
+      }
+    },
+    {
+      "Event": {
+        "Time": 0.08,
+        "EventType": "HapticTransient",
+        "EventParameters": [
+          { "ParameterID": "HapticIntensity", "ParameterValue": 0.95 },
+          { "ParameterID": "HapticSharpness", "ParameterValue": 0.9 }
+        ]
+      }
+    },
+    {
+      "Event": {
+        "Time": 0.16,
+        "EventType": "HapticTransient",
+        "EventParameters": [
+          { "ParameterID": "HapticIntensity", "ParameterValue": 1.0 },
+          { "ParameterID": "HapticSharpness", "ParameterValue": 0.95 }
+        ]
+      }
+    }
+  ]
+}

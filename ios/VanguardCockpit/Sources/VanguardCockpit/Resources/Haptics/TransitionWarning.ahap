@@ -1,0 +1,17 @@
+{
+  "Version": 1.0,
+  "Metadata": { "Project": "Vanguard", "Created": "2026-04-16" },
+  "Pattern": [
+    {
+      "Event": {
+        "Time": 0.0,
+        "EventType": "HapticContinuous",
+        "EventDuration": 0.35,
+        "EventParameters": [
+          { "ParameterID": "HapticIntensity", "ParameterValue": 0.3 },
+          { "ParameterID": "HapticSharpness", "ParameterValue": 0.2 }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+# Production-style API (no hot reload). TLS is expected at the edge (load balancer / PaaS).
+# Usage:
+#   docker compose -f docker-compose.prod.yml up -d --build
+#
+# Mutable JSON stores go under RAGSTONE_DATA_ROOT when set (mount a named volume or host path).
+
+services:
+  api:
+    build: .
+    ports:
+      - "${COCKPIT_PORT:-8000}:8000"
+    environment:
+      PORT: "8000"
+      # RAGSTONE_DATA_ROOT: "/data"
+    # volumes:
+    #   - cockpit_data:/data
+    command: uvicorn api.main:app --host 0.0.0.0 --port 8000
+
+# volumes:
+#   cockpit_data:

@@ -1,0 +1,21 @@
+# Dev / tests (optional: pip install -r requirements.txt in .venv)
+pytest>=8
+
+streamlit>=1.40
+streamlit-shortcuts>=0.3.0,<1.0
+fastapi>=0.115
+python-multipart>=0.0.9
+uvicorn[standard]>=0.32
+httpx[http2]>=0.27
+PyJWT[crypto]>=2.8
+pydantic>=2
+requests
+toml>=0.10
+Pillow
+google-generativeai
+google-api-python-client
+google-auth-oauthlib
+google-auth-httplib2
+caldav
+icalendar
+plotly>=5.18

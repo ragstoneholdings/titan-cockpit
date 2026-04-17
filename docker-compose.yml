@@ -1,0 +1,21 @@
+# Titan Cockpit API — local dev parity with `make dev-api`
+# Usage: `docker compose up --build` then GET http://127.0.0.1:8000/api/health
+#
+# The bind mount keeps JSON state files on the host repo (same paths as non-Docker).
+# For a production-style run without a mount, use `docker compose run` / `docker run`
+# from a built image (state is ephemeral unless you add external storage in Phase 3).
+
+services:
+  api:
+    build: .
+    ports:
+      - "${COCKPIT_PORT:-8000}:8000"
+    environment:
+      PORT: "8000"
+    volumes:
+      - ./:/app
+    command: >
+      uvicorn api.main:app
+      --host 0.0.0.0
+      --port 8000
+      --reload

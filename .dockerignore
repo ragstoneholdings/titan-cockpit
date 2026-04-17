@@ -1,0 +1,42 @@
+# VCS
+.git
+.gitignore
+
+# Python
+.venv
+**/__pycache__
+**/*.py[cod]
+**/.pytest_cache
+.mypy_cache
+.ruff_cache
+*.egg-info
+
+# Local env — copy `.env.example` to `.env` on the host; do not bake secrets into the image
+.env
+.env.save
+
+# Node / front-end (API image does not need Vite deps)
+web/node_modules
+web/dist
+
+# iOS / Xcode (not used by API container)
+ios
+**/*.xcodeproj
+**/*.xcworkspace
+**/DerivedData
+
+# Streamlit local secrets (optional; mount or inject in prod)
+.streamlit
+
+# Large / machine-local JSON caches and logs (bind-mount repo in dev instead)
+ranked_cache.json
+zapier_inbound_log.json
+device_push_tokens.json
+
+# Editor
+.cursor
+.idea
+*.swp
+
+# OS
+.DS_Store

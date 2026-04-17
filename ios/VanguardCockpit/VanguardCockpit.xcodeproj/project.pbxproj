@@ -1,0 +1,707 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		05723CFA8FC25814EFAB093E /* DeviceActivityScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9BE821F96338A48DCD4931 /* DeviceActivityScheduler.swift */; };
+		08BF971C1CE95E59C26AAB77 /* PowerTrioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650961752112CB313D24777E /* PowerTrioView.swift */; };
+		090441ADF9D0E71E096FE2B4 /* DeviceActivityMonitor.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = F8C14198CA183B3563E29347 /* DeviceActivityMonitor.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		095ED292746396877D07112B /* VanguardCockpitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF7A76651B440F42F219A6C /* VanguardCockpitApp.swift */; };
+		0CE17B2A0E0B96271718833F /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B4250A18A34C478D01FFFD /* AppConfig.swift */; };
+		0F8A65039CC06F309C27DC0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84CBCFD4B90BD1125389C2CF /* Assets.xcassets */; };
+		0FE49BD6A5921482E6E751E8 /* TransitionWarning.ahap in Resources */ = {isa = PBXBuildFile; fileRef = 8AEA6A20AB2882614BC55D44 /* TransitionWarning.ahap */; };
+		1034382E384BC2BF555C91DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44251E5AE4FB4B65A428410 /* AppDelegate.swift */; };
+		180C497D0D4B4DDF0C2DFED2 /* AdversarialCoachService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7AC413FA4689638FE763F8 /* AdversarialCoachService.swift */; };
+		203034D8162FE2DEFF761EE6 /* SovereigntyModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159D4FA40D97E5F4885B85DE /* SovereigntyModels.swift */; };
+		2496C4C3C231AACB6F553F2C /* DoorwayKnock.ahap in Resources */ = {isa = PBXBuildFile; fileRef = 742C275447EBD382D3157ABC /* DoorwayKnock.ahap */; };
+		256FBADB456528F2DEC69AAC /* ScreenTimeSelectionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAB2AB8B26B91AFA72976A4 /* ScreenTimeSelectionStore.swift */; };
+		2AAE49549AFFD2031B1F3561 /* SettingsFlowsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A69EBC4E0478D537BE1BBA /* SettingsFlowsView.swift */; };
+		35AE06E0C7C6FDCAE9106104 /* InboxShieldCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D964E159427000E1CEB5A5C /* InboxShieldCoordinator.swift */; };
+		383FE042B9A4ED229678EDBF /* DeviceActivityMonitorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5E23C8C6921653719EE00A /* DeviceActivityMonitorExtension.swift */; };
+		3BC93FC6443FBDEA9F1CE3ED /* ShieldManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DF379D1794FA6A3E3CFB7C /* ShieldManager.swift */; };
+		427E562E0609D5536DFFE7CE /* PostureMotionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF81117E27AEA2294BA993A2 /* PostureMotionService.swift */; };
+		545CE4EEABF757BE95473F24 /* DoorwayGeofenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A050904D9ABDB4A318C8B660 /* DoorwayGeofenceService.swift */; };
+		5720F142178305289A09D68B /* IdentityAlignmentScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF6358E34E1E4D981259F64 /* IdentityAlignmentScheduler.swift */; };
+		5720F57404BFDA84A55FB518 /* UrgentEscalation.ahap in Resources */ = {isa = PBXBuildFile; fileRef = 81418EA63B8A72DD209D6F23 /* UrgentEscalation.ahap */; };
+		5DBF23CDC65CDD74C4BDC329 /* CockpitAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F398F338A436F7EEC23825 /* CockpitAPIClient.swift */; };
+		6366791C9D604DFAE4D63AF7 /* CockpitKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E714E50EB3F838A221534AD /* CockpitKeychain.swift */; };
+		70D67F2ECE1FD2C1B71E5820 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF61CBA7E0ACB91434FA210 /* DashboardView.swift */; };
+		75CC66B96EA03278B59B6817 /* ToolsFlowsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7640A5B3386A8C69A6C548 /* ToolsFlowsView.swift */; };
+		77E6311A3F61A6CB9F49AFEB /* CockpitDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C9A90EE4DEABA01A894239 /* CockpitDTO.swift */; };
+		ABE374337252C424BF6E26ED /* ShieldScheduleLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698C67FE755A9D120507F8A1 /* ShieldScheduleLogic.swift */; };
+		BBBFA01D408E62756E3A4492 /* FamilyControlsAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A704319EAE939B2593E780A /* FamilyControlsAuth.swift */; };
+		DB0D05A1D24C7D8448713DAA /* HapticSovereigntyEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55B68629D15769BB6FC95C9 /* HapticSovereigntyEngine.swift */; };
+		DFFBB8BE1C5FF54CBC67DA53 /* DistractionShieldPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCA6B37947C99D5AC4F8743 /* DistractionShieldPolicy.swift */; };
+		E6EA2C61604366FEA4BB2BF2 /* DeepWorkPulse.ahap in Resources */ = {isa = PBXBuildFile; fileRef = E81CFCD5DC79C64ED5E6CB84 /* DeepWorkPulse.ahap */; };
+		EB48861C9A5C1D3835F57920 /* CockpitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE94B199DDDE3F22F7215842 /* CockpitViewModel.swift */; };
+		F0F9F8612FD40CA8D6786CA8 /* ScheduleMathTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DA924A2BC4BECD7B224206 /* ScheduleMathTests.swift */; };
+		F1C8720D0AC444870844B179 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280F24384D7DA67A7BC9FD9F /* ContentView.swift */; };
+		FA7808FE118B4C28FF4E81BB /* HealthBaselineReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BC66B631C95EB880C3B17D /* HealthBaselineReader.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5995F2C9D615C7DD2DD07896 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B23BBE8B449C0273776E831D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F7D06DE7893230796DB88AB3;
+			remoteInfo = DeviceActivityMonitor;
+		};
+		6C0C7BB6E014938C208F86B8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B23BBE8B449C0273776E831D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 11DD616615EF3A1B5E8434E1;
+			remoteInfo = VanguardCockpit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5E66573397FD5C777CF22EA9 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				090441ADF9D0E71E096FE2B4 /* DeviceActivityMonitor.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		04DF379D1794FA6A3E3CFB7C /* ShieldManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShieldManager.swift; sourceTree = "<group>"; };
+		072E2B0D614762865271D62A /* VanguardCockpitTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = VanguardCockpitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		07F398F338A436F7EEC23825 /* CockpitAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CockpitAPIClient.swift; sourceTree = "<group>"; };
+		12DA924A2BC4BECD7B224206 /* ScheduleMathTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleMathTests.swift; sourceTree = "<group>"; };
+		159D4FA40D97E5F4885B85DE /* SovereigntyModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SovereigntyModels.swift; sourceTree = "<group>"; };
+		1E9BE821F96338A48DCD4931 /* DeviceActivityScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceActivityScheduler.swift; sourceTree = "<group>"; };
+		280F24384D7DA67A7BC9FD9F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3D964E159427000E1CEB5A5C /* InboxShieldCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxShieldCoordinator.swift; sourceTree = "<group>"; };
+		3E714E50EB3F838A221534AD /* CockpitKeychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CockpitKeychain.swift; sourceTree = "<group>"; };
+		45A69EBC4E0478D537BE1BBA /* SettingsFlowsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsFlowsView.swift; sourceTree = "<group>"; };
+		51BC66B631C95EB880C3B17D /* HealthBaselineReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthBaselineReader.swift; sourceTree = "<group>"; };
+		5CCA6B37947C99D5AC4F8743 /* DistractionShieldPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistractionShieldPolicy.swift; sourceTree = "<group>"; };
+		650961752112CB313D24777E /* PowerTrioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerTrioView.swift; sourceTree = "<group>"; };
+		698C67FE755A9D120507F8A1 /* ShieldScheduleLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShieldScheduleLogic.swift; sourceTree = "<group>"; };
+		6CF7A76651B440F42F219A6C /* VanguardCockpitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VanguardCockpitApp.swift; sourceTree = "<group>"; };
+		742C275447EBD382D3157ABC /* DoorwayKnock.ahap */ = {isa = PBXFileReference; path = DoorwayKnock.ahap; sourceTree = "<group>"; };
+		7A704319EAE939B2593E780A /* FamilyControlsAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyControlsAuth.swift; sourceTree = "<group>"; };
+		7EAB2AB8B26B91AFA72976A4 /* ScreenTimeSelectionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTimeSelectionStore.swift; sourceTree = "<group>"; };
+		81418EA63B8A72DD209D6F23 /* UrgentEscalation.ahap */ = {isa = PBXFileReference; path = UrgentEscalation.ahap; sourceTree = "<group>"; };
+		84CBCFD4B90BD1125389C2CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8AEA6A20AB2882614BC55D44 /* TransitionWarning.ahap */ = {isa = PBXFileReference; path = TransitionWarning.ahap; sourceTree = "<group>"; };
+		8D7AC413FA4689638FE763F8 /* AdversarialCoachService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdversarialCoachService.swift; sourceTree = "<group>"; };
+		8DF6358E34E1E4D981259F64 /* IdentityAlignmentScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentityAlignmentScheduler.swift; sourceTree = "<group>"; };
+		A050904D9ABDB4A318C8B660 /* DoorwayGeofenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoorwayGeofenceService.swift; sourceTree = "<group>"; };
+		ADAD40377B63E985D74FB4B7 /* VanguardCockpit.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = VanguardCockpit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE94B199DDDE3F22F7215842 /* CockpitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CockpitViewModel.swift; sourceTree = "<group>"; };
+		B44251E5AE4FB4B65A428410 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B8B4250A18A34C478D01FFFD /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+		CAF61CBA7E0ACB91434FA210 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		CF5E23C8C6921653719EE00A /* DeviceActivityMonitorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceActivityMonitorExtension.swift; sourceTree = "<group>"; };
+		D55B68629D15769BB6FC95C9 /* HapticSovereigntyEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticSovereigntyEngine.swift; sourceTree = "<group>"; };
+		E81CFCD5DC79C64ED5E6CB84 /* DeepWorkPulse.ahap */ = {isa = PBXFileReference; path = DeepWorkPulse.ahap; sourceTree = "<group>"; };
+		E9C9A90EE4DEABA01A894239 /* CockpitDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CockpitDTO.swift; sourceTree = "<group>"; };
+		EA7640A5B3386A8C69A6C548 /* ToolsFlowsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsFlowsView.swift; sourceTree = "<group>"; };
+		F1C26440E1F324CFFE0C9B8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F8C14198CA183B3563E29347 /* DeviceActivityMonitor.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = DeviceActivityMonitor.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF81117E27AEA2294BA993A2 /* PostureMotionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostureMotionService.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		072F39DAC727B2EF99F05AAD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F8C14198CA183B3563E29347 /* DeviceActivityMonitor.appex */,
+				ADAD40377B63E985D74FB4B7 /* VanguardCockpit.app */,
+				072E2B0D614762865271D62A /* VanguardCockpitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		296A22A0E5B86A24D58FF346 /* VanguardCockpitTests */ = {
+			isa = PBXGroup;
+			children = (
+				12DA924A2BC4BECD7B224206 /* ScheduleMathTests.swift */,
+			);
+			name = VanguardCockpitTests;
+			path = Tests/VanguardCockpitTests;
+			sourceTree = "<group>";
+		};
+		34A08BDE88BC4E5852C22C4F /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				8D7AC413FA4689638FE763F8 /* AdversarialCoachService.swift */,
+				07F398F338A436F7EEC23825 /* CockpitAPIClient.swift */,
+				E9C9A90EE4DEABA01A894239 /* CockpitDTO.swift */,
+				3E714E50EB3F838A221534AD /* CockpitKeychain.swift */,
+				A050904D9ABDB4A318C8B660 /* DoorwayGeofenceService.swift */,
+				D55B68629D15769BB6FC95C9 /* HapticSovereigntyEngine.swift */,
+				51BC66B631C95EB880C3B17D /* HealthBaselineReader.swift */,
+				FF81117E27AEA2294BA993A2 /* PostureMotionService.swift */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		52A68A648ECC2567F18A03FE = {
+			isa = PBXGroup;
+			children = (
+				9197EF38F47FBC788E2EBE49 /* DeviceActivityMonitor */,
+				63D64C426932DBAB37C14E9F /* VanguardCockpit */,
+				296A22A0E5B86A24D58FF346 /* VanguardCockpitTests */,
+				072F39DAC727B2EF99F05AAD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		63D64C426932DBAB37C14E9F /* VanguardCockpit */ = {
+			isa = PBXGroup;
+			children = (
+				B8B4250A18A34C478D01FFFD /* AppConfig.swift */,
+				B44251E5AE4FB4B65A428410 /* AppDelegate.swift */,
+				280F24384D7DA67A7BC9FD9F /* ContentView.swift */,
+				CAF61CBA7E0ACB91434FA210 /* DashboardView.swift */,
+				650961752112CB313D24777E /* PowerTrioView.swift */,
+				45A69EBC4E0478D537BE1BBA /* SettingsFlowsView.swift */,
+				EA7640A5B3386A8C69A6C548 /* ToolsFlowsView.swift */,
+				6CF7A76651B440F42F219A6C /* VanguardCockpitApp.swift */,
+				7B1969BE0B1C81995E4D6DB7 /* Application */,
+				A7D240CBF4006884625E0D99 /* Domain */,
+				34A08BDE88BC4E5852C22C4F /* Infrastructure */,
+				6EF83914500E55A2679DD74D /* Resources */,
+				BEF99019B2E846EC41AE71B6 /* ScreenTime */,
+			);
+			name = VanguardCockpit;
+			path = Sources/VanguardCockpit;
+			sourceTree = "<group>";
+		};
+		6EF83914500E55A2679DD74D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				84CBCFD4B90BD1125389C2CF /* Assets.xcassets */,
+				8FFC38C09C4AE2D46DE37D61 /* Haptics */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7B1969BE0B1C81995E4D6DB7 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				AE94B199DDDE3F22F7215842 /* CockpitViewModel.swift */,
+				8DF6358E34E1E4D981259F64 /* IdentityAlignmentScheduler.swift */,
+				698C67FE755A9D120507F8A1 /* ShieldScheduleLogic.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		8FFC38C09C4AE2D46DE37D61 /* Haptics */ = {
+			isa = PBXGroup;
+			children = (
+				E81CFCD5DC79C64ED5E6CB84 /* DeepWorkPulse.ahap */,
+				742C275447EBD382D3157ABC /* DoorwayKnock.ahap */,
+				8AEA6A20AB2882614BC55D44 /* TransitionWarning.ahap */,
+				81418EA63B8A72DD209D6F23 /* UrgentEscalation.ahap */,
+			);
+			path = Haptics;
+			sourceTree = "<group>";
+		};
+		9197EF38F47FBC788E2EBE49 /* DeviceActivityMonitor */ = {
+			isa = PBXGroup;
+			children = (
+				CF5E23C8C6921653719EE00A /* DeviceActivityMonitorExtension.swift */,
+				F1C26440E1F324CFFE0C9B8C /* Info.plist */,
+			);
+			name = DeviceActivityMonitor;
+			path = Sources/DeviceActivityMonitor;
+			sourceTree = "<group>";
+		};
+		A7D240CBF4006884625E0D99 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				159D4FA40D97E5F4885B85DE /* SovereigntyModels.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		BEF99019B2E846EC41AE71B6 /* ScreenTime */ = {
+			isa = PBXGroup;
+			children = (
+				1E9BE821F96338A48DCD4931 /* DeviceActivityScheduler.swift */,
+				5CCA6B37947C99D5AC4F8743 /* DistractionShieldPolicy.swift */,
+				7A704319EAE939B2593E780A /* FamilyControlsAuth.swift */,
+				3D964E159427000E1CEB5A5C /* InboxShieldCoordinator.swift */,
+				7EAB2AB8B26B91AFA72976A4 /* ScreenTimeSelectionStore.swift */,
+				04DF379D1794FA6A3E3CFB7C /* ShieldManager.swift */,
+			);
+			path = ScreenTime;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		11DD616615EF3A1B5E8434E1 /* VanguardCockpit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A94B0A17688110E4FBC66228 /* Build configuration list for PBXNativeTarget "VanguardCockpit" */;
+			buildPhases = (
+				FF72106569596C8ADA6D128A /* Sources */,
+				F82B8301FC909277D657BB47 /* Resources */,
+				5E66573397FD5C777CF22EA9 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8C8535558477EBB4851EBE5E /* PBXTargetDependency */,
+			);
+			name = VanguardCockpit;
+			packageProductDependencies = (
+			);
+			productName = VanguardCockpit;
+			productReference = ADAD40377B63E985D74FB4B7 /* VanguardCockpit.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1EB3FBCECA52E21A6A5860D7 /* VanguardCockpitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D69D2F782B5AE74344A7130 /* Build configuration list for PBXNativeTarget "VanguardCockpitTests" */;
+			buildPhases = (
+				68998B9D6E4AA34854456546 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				91057148E102F3CB4820E527 /* PBXTargetDependency */,
+			);
+			name = VanguardCockpitTests;
+			packageProductDependencies = (
+			);
+			productName = VanguardCockpitTests;
+			productReference = 072E2B0D614762865271D62A /* VanguardCockpitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F7D06DE7893230796DB88AB3 /* DeviceActivityMonitor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 951C2B31ED199B6DFFC80AB0 /* Build configuration list for PBXNativeTarget "DeviceActivityMonitor" */;
+			buildPhases = (
+				C3E3558BADB34DF016D235A3 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DeviceActivityMonitor;
+			packageProductDependencies = (
+			);
+			productName = DeviceActivityMonitor;
+			productReference = F8C14198CA183B3563E29347 /* DeviceActivityMonitor.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B23BBE8B449C0273776E831D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					11DD616615EF3A1B5E8434E1 = {
+						DevelopmentTeam = "";
+					};
+					1EB3FBCECA52E21A6A5860D7 = {
+						DevelopmentTeam = "";
+					};
+					F7D06DE7893230796DB88AB3 = {
+						DevelopmentTeam = "";
+					};
+				};
+			};
+			buildConfigurationList = 41C053BD5CD316C2C2D9F53F /* Build configuration list for PBXProject "VanguardCockpit" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 52A68A648ECC2567F18A03FE;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 072F39DAC727B2EF99F05AAD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F7D06DE7893230796DB88AB3 /* DeviceActivityMonitor */,
+				11DD616615EF3A1B5E8434E1 /* VanguardCockpit */,
+				1EB3FBCECA52E21A6A5860D7 /* VanguardCockpitTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F82B8301FC909277D657BB47 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F8A65039CC06F309C27DC0B /* Assets.xcassets in Resources */,
+				E6EA2C61604366FEA4BB2BF2 /* DeepWorkPulse.ahap in Resources */,
+				2496C4C3C231AACB6F553F2C /* DoorwayKnock.ahap in Resources */,
+				0FE49BD6A5921482E6E751E8 /* TransitionWarning.ahap in Resources */,
+				5720F57404BFDA84A55FB518 /* UrgentEscalation.ahap in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		68998B9D6E4AA34854456546 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0F9F8612FD40CA8D6786CA8 /* ScheduleMathTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3E3558BADB34DF016D235A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				383FE042B9A4ED229678EDBF /* DeviceActivityMonitorExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF72106569596C8ADA6D128A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				180C497D0D4B4DDF0C2DFED2 /* AdversarialCoachService.swift in Sources */,
+				0CE17B2A0E0B96271718833F /* AppConfig.swift in Sources */,
+				1034382E384BC2BF555C91DE /* AppDelegate.swift in Sources */,
+				5DBF23CDC65CDD74C4BDC329 /* CockpitAPIClient.swift in Sources */,
+				77E6311A3F61A6CB9F49AFEB /* CockpitDTO.swift in Sources */,
+				6366791C9D604DFAE4D63AF7 /* CockpitKeychain.swift in Sources */,
+				EB48861C9A5C1D3835F57920 /* CockpitViewModel.swift in Sources */,
+				F1C8720D0AC444870844B179 /* ContentView.swift in Sources */,
+				70D67F2ECE1FD2C1B71E5820 /* DashboardView.swift in Sources */,
+				05723CFA8FC25814EFAB093E /* DeviceActivityScheduler.swift in Sources */,
+				DFFBB8BE1C5FF54CBC67DA53 /* DistractionShieldPolicy.swift in Sources */,
+				545CE4EEABF757BE95473F24 /* DoorwayGeofenceService.swift in Sources */,
+				BBBFA01D408E62756E3A4492 /* FamilyControlsAuth.swift in Sources */,
+				DB0D05A1D24C7D8448713DAA /* HapticSovereigntyEngine.swift in Sources */,
+				FA7808FE118B4C28FF4E81BB /* HealthBaselineReader.swift in Sources */,
+				5720F142178305289A09D68B /* IdentityAlignmentScheduler.swift in Sources */,
+				35AE06E0C7C6FDCAE9106104 /* InboxShieldCoordinator.swift in Sources */,
+				427E562E0609D5536DFFE7CE /* PostureMotionService.swift in Sources */,
+				08BF971C1CE95E59C26AAB77 /* PowerTrioView.swift in Sources */,
+				256FBADB456528F2DEC69AAC /* ScreenTimeSelectionStore.swift in Sources */,
+				2AAE49549AFFD2031B1F3561 /* SettingsFlowsView.swift in Sources */,
+				3BC93FC6443FBDEA9F1CE3ED /* ShieldManager.swift in Sources */,
+				ABE374337252C424BF6E26ED /* ShieldScheduleLogic.swift in Sources */,
+				203034D8162FE2DEFF761EE6 /* SovereigntyModels.swift in Sources */,
+				75CC66B96EA03278B59B6817 /* ToolsFlowsView.swift in Sources */,
+				095ED292746396877D07112B /* VanguardCockpitApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8C8535558477EBB4851EBE5E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F7D06DE7893230796DB88AB3 /* DeviceActivityMonitor */;
+			targetProxy = 5995F2C9D615C7DD2DD07896 /* PBXContainerItemProxy */;
+		};
+		91057148E102F3CB4820E527 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 11DD616615EF3A1B5E8434E1 /* VanguardCockpit */;
+			targetProxy = 6C0C7BB6E014938C208F86B8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		086530BD5D669F4E0A68FC8A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				CODE_SIGN_ENTITLEMENTS = Sources/VanguardCockpit/VanguardCockpit.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_TESTABILITY = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Vanguard Cockpit";
+				INFOPLIST_KEY_NSFamilyControlsUsageDescription = "Vanguard Cockpit uses Screen Time to enforce focus shields and scheduled digital boundaries you configure.";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Optional Health metrics for sovereignty baselines when you enable them.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Optional Health updates when you enable physical baseline tracking.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Optional visit-based doorway checks when you enable location.";
+				INFOPLIST_KEY_NSMotionUsageDescription = "Posture awareness uses device motion while the app is active.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ragstone.vanguard.cockpit;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2BF146FBB7F6D73B08D45940 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ragstone.vanguard.cockpit.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VanguardCockpit.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/VanguardCockpit";
+			};
+			name = Release;
+		};
+		2C4EAD322FCC8ECB20853E53 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				CODE_SIGN_ENTITLEMENTS = Sources/VanguardCockpit/VanguardCockpit.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_TESTABILITY = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Vanguard Cockpit";
+				INFOPLIST_KEY_NSFamilyControlsUsageDescription = "Vanguard Cockpit uses Screen Time to enforce focus shields and scheduled digital boundaries you configure.";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Optional Health metrics for sovereignty baselines when you enable them.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Optional Health updates when you enable physical baseline tracking.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Optional visit-based doorway checks when you enable location.";
+				INFOPLIST_KEY_NSMotionUsageDescription = "Posture awareness uses device motion while the app is active.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ragstone.vanguard.cockpit;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		953B72F69BD9421B8EFD47FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		AAA85E6C63F8CC0735F335B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ragstone.vanguard.cockpit.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VanguardCockpit.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/VanguardCockpit";
+			};
+			name = Debug;
+		};
+		AB9C9F7D439A0C7A2A631782 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Sources/DeviceActivityMonitor/DeviceActivityMonitor.entitlements;
+				INFOPLIST_FILE = Sources/DeviceActivityMonitor/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ragstone.vanguard.cockpit.monitor;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E28974FBF7710898C31C17A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		FB9B609F4C8334834751B16D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Sources/DeviceActivityMonitor/DeviceActivityMonitor.entitlements;
+				INFOPLIST_FILE = Sources/DeviceActivityMonitor/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ragstone.vanguard.cockpit.monitor;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D69D2F782B5AE74344A7130 /* Build configuration list for PBXNativeTarget "VanguardCockpitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAA85E6C63F8CC0735F335B6 /* Debug */,
+				2BF146FBB7F6D73B08D45940 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		41C053BD5CD316C2C2D9F53F /* Build configuration list for PBXProject "VanguardCockpit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				953B72F69BD9421B8EFD47FD /* Debug */,
+				E28974FBF7710898C31C17A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		951C2B31ED199B6DFFC80AB0 /* Build configuration list for PBXNativeTarget "DeviceActivityMonitor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB9C9F7D439A0C7A2A631782 /* Debug */,
+				FB9B609F4C8334834751B16D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		A94B0A17688110E4FBC66228 /* Build configuration list for PBXNativeTarget "VanguardCockpit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C4EAD322FCC8ECB20853E53 /* Debug */,
+				086530BD5D669F4E0A68FC8A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B23BBE8B449C0273776E831D /* Project object */;
+}

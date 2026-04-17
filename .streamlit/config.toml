@@ -1,0 +1,10 @@
+# Streamlit — reliable access from your system browser (Safari/Chrome), not only Cursor’s preview.
+# Docs: https://docs.streamlit.io/develop/api-reference/configuration/config.toml
+
+[server]
+address = "0.0.0.0"
+port = 8501
+headless = true
+
+[browser]
+gatherUsageStats = false

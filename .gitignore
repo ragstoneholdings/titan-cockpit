@@ -1,0 +1,27 @@
+# Never commit real keys (use secrets.toml.example as a template).
+.streamlit/secrets.toml
+.env
+.env.save
+credentials.json
+*.tsbuildinfo
+integrity_stats.json
+golden_path_proposal_actions.json
+schedule_tradeoff_answers.json
+todoist_graveyard.json
+posture_protocol_state.json
+zapier_inbound_log.json
+zapier_idempotency_keys.json
+*.pyc
+.venv/
+web/node_modules/
+web/dist/
+ranked_cache.json
+cockpit_power_trio_state.json
+morning_brief_state.json
+titan_sartorial_prep.json
+runway_overrides.json
+work_calendar_advisory.json
+identity.json
+token.json
+cockpit_protocol_settings.json
+device_push_tokens.json
