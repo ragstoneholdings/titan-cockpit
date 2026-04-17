@@ -2,6 +2,7 @@ import Foundation
 
 enum AppConfig {
     /// Base URL for Titan Cockpit API (no trailing slash). Override in scheme env e.g. `COCKPIT_API_BASE`.
+    /// Production example: `https://ragstone-titan-cockpit.fly.dev` (see root README).
     static var apiBaseURL: URL {
         if let raw = ProcessInfo.processInfo.environment["COCKPIT_API_BASE"], let u = URL(string: raw), !raw.isEmpty {
             return u

@@ -65,6 +65,16 @@ For production, set **`RAGSTONE_DATA_ROOT`** to a path on a **persistent volume*
 
 Back up that directory on your platform’s schedule, or document export of the JSON files you care about before destructive operations.
 
+## Fly.io — secrets checklist (template)
+
+After `fly launch` / `fly deploy`, set at least:
+
+```bash
+fly secrets set COCKPIT_API_KEY="..." ALLOW_ORIGINS="https://your-site.example.com"
+```
+
+Add integration keys from [`.env.example`](../.env.example) as needed (`TODOIST_API_KEY`, `GEMINI_API_KEY`, …). For durable JSON files across restarts, attach a volume and set `RAGSTONE_DATA_ROOT=/data` (see [fly.toml](../fly.toml) `[[mounts]]` comments).
+
 ## Fly.io (example)
 
 1. Copy [`fly.toml`](../fly.toml); set `app` to your app name (`fly launch` can generate one).
