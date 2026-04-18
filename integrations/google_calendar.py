@@ -62,3 +62,19 @@ def list_google_calendar_events_for_day(
         if not page_token:
             break
     return events
+
+
+def safe_list_google_calendar_events_for_day(
+    service: Any,
+    day: date,
+    calendar_id: str,
+) -> Tuple[List[Dict[str, Any]], str]:
+    """Defensive wrapper used by mobile APIs for readiness/status reporting."""
+    if not isinstance(day, date):
+        return [], "invalid_day"
+    if service is None:
+        return [], "not_connected"
+    try:
+        return list_google_calendar_events_for_day(service, day, calendar_id), ""
+    except Exception as e:  # noqa: BLE001
+        return [], str(e)

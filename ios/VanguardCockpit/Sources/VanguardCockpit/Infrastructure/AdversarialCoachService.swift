@@ -1,6 +1,6 @@
 import Foundation
 
-/// Calls FastAPI `POST /api/vanguard/opportunity-cost` (Gemini-backed when configured).
+/// Calls FastAPI `POST /api/mobile/opportunity-cost` (Gemini-backed when configured).
 struct AdversarialCoachService {
     private let api = CockpitAPIClient()
 

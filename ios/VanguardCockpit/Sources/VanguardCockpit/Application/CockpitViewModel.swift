@@ -10,7 +10,7 @@ final class CockpitViewModel {
     var lastError: String?
     var cockpit: CockpitResponseDTO?
     var ragstoneLine: String = ""
-    /// One line from `GET /api/qbo/status` when available.
+    /// One line from mobile dashboard payload when available.
     var qboLine: String = ""
     /// `nil` = server default (usually today).
     var reconDay: String?
@@ -24,15 +24,13 @@ final class CockpitViewModel {
         let d = day ?? reconDay
         qboLine = ""
         do {
-            cockpit = try await api.fetchCockpit(day: d)
-            let ledger = try await api.fetchRagstoneLedger()
-            ragstoneLine = Self.formatLedgerLine(ledger)
-            if let q = try? await api.fetchQBOStatus() {
-                let msg = q.message.trimmingCharacters(in: .whitespacesAndNewlines)
-                qboLine = msg.isEmpty ? q.status : "\(q.status): \(msg)"
-            }
+            let dashboard = try await api.fetchMobileDashboard(day: d)
+            cockpit = dashboard.cockpit
+            ragstoneLine = dashboard.ragstone_line
+            qboLine = dashboard.qbo_line
         } catch {
             lastError = error.localizedDescription
+            return
         }
     }
 
@@ -56,17 +54,4 @@ final class CockpitViewModel {
         try? context.save()
     }
 
-    private static func formatLedgerLine(_ ledger: [String: AnyCodableJSON]) -> String {
-        func num(_ k: String) -> String {
-            guard let v = ledger[k] else { return "—" }
-            switch v {
-            case .double(let d): return String(format: "%.1f", d)
-            case .int(let i): return "\(i)"
-            default: return "—"
-            }
-        }
-        let runway = num("cash_runway_months")
-        let yoy = num("yoy_revenue_growth_percent")
-        return "Runway \(runway) mo · YoY \(yoy)%"
-    }
 }

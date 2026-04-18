@@ -265,3 +265,15 @@ def fetch_personal_calendar_events_from_env(day: date) -> Tuple[List[Dict[str, A
     if apple_id and app_pw:
         return parse_icloud_calendars_events_and_hours(apple_id, app_pw, day, cal_filter)
     return [], 0.0, "not_configured"
+
+
+def personal_calendar_source_status_from_env() -> Dict[str, Any]:
+    """Return normalized provider status for mobile readiness and diagnostics."""
+    ics_url = env_str("APPLE_CALENDAR_ICS_URL", "").strip()
+    apple_id = env_str("ICLOUD_APPLE_ID", "").strip()
+    app_pw = env_str("ICLOUD_APP_PASSWORD", "").strip()
+    if ics_url:
+        return {"configured": True, "mode": "ics"}
+    if apple_id and app_pw:
+        return {"configured": True, "mode": "icloud"}
+    return {"configured": False, "mode": "none"}

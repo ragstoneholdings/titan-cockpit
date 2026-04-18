@@ -33,6 +33,7 @@ from api.routers import (  # noqa: E402
     identity_api,
     integrations,
     integrity_api,
+    mobile,
     posture_protocol_api,
     protocol_api,
     qbo,
@@ -68,6 +69,7 @@ app.add_middleware(CockpitAuthMiddleware)
 
 app.include_router(health.router, prefix="/api")
 app.include_router(cockpit.router, prefix="/api")
+app.include_router(mobile.router, prefix="/api")
 app.include_router(todoist.router, prefix="/api")
 app.include_router(calendar_advisory.router, prefix="/api")
 app.include_router(google_auth.router, prefix="/api")

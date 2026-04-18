@@ -39,6 +39,15 @@ cd ios/VanguardCockpit && ./../../scripts/ios_xcodegen.sh && open VanguardCockpi
 
 See [ios/VanguardCockpit/README.md](ios/VanguardCockpit/README.md).
 
+iOS canonical API contract is the mobile namespace:
+
+- `GET /api/mobile/dashboard`
+- `GET /api/mobile/power-trio`
+- `POST /api/mobile/opportunity-cost`
+- `POST /api/mobile/windshield-triage`
+
+The web cockpit routes remain separate and are non-canonical for iOS.
+
 **Production / device / TestFlight:** set Xcode scheme environment variables:
 
 | Variable | Example |

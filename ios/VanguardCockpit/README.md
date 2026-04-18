@@ -1,6 +1,6 @@
 # Vanguard Cockpit (iOS)
 
-Native SwiftUI client for the Titan Cockpit FastAPI (`GET /api/cockpit`, `GET /api/vanguard/ragstone-ledger`, `POST /api/vanguard/opportunity-cost`, `GET /api/qbo/status`).
+Native SwiftUI client for the Titan Cockpit mobile API surface (`GET /api/mobile/dashboard`, `GET /api/mobile/power-trio`, `POST /api/mobile/opportunity-cost`, `POST /api/mobile/windshield-triage`).
 
 ## Generate the Xcode project
 

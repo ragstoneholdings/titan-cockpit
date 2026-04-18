@@ -96,3 +96,84 @@ def test_cockpit_json():
     assert "zero_utility_labor_today" in data
     assert "evening_wins_count" in data
     assert "evening_leaks_count" in data
+
+
+def test_mobile_dashboard_and_power_trio_json():
+    c = TestClient(app)
+    r = c.get("/api/mobile/dashboard", params={"day": "2026-04-11"})
+    assert r.status_code == 200
+    data = r.json()
+    assert "cockpit" in data
+    cockpit = data["cockpit"]
+    assert cockpit["date"] == "2026-04-11"
+    assert "identity_purpose" in cockpit
+    assert isinstance(cockpit["identity_purpose"], str)
+    assert "runway" in cockpit
+    assert "sovereignty" in cockpit
+    assert "schedule_day_signals" in cockpit
+    assert "ragstone_line" in data
+    assert "qbo_line" in data
+
+    t = c.get("/api/mobile/power-trio", params={"day": "2026-04-11"})
+    assert t.status_code == 200
+    trio = t.json()
+    assert "slots" in trio
+    assert "ranked_total" in trio
+    assert trio["recon_day"] == "2026-04-11"
+
+
+def test_mobile_readiness_and_day_plan_flow():
+    c = TestClient(app)
+
+    rd = c.get("/api/mobile/readiness")
+    assert rd.status_code == 200
+    readiness = rd.json()
+    assert readiness["ok"] is True
+    assert "gemini_configured" in readiness
+    assert "google_calendar_connected" in readiness
+
+    gen = c.post(
+        "/api/mobile/day-plan/generate",
+        json={"day": "2026-04-11", "objective": "Protect deep work and calendar control"},
+    )
+    assert gen.status_code == 200
+    plan = gen.json()
+    assert plan["day"] == "2026-04-11"
+    assert isinstance(plan.get("blocks"), list)
+    assert len(plan.get("blocks") or []) >= 1
+    assert "plan_id" in plan and plan["plan_id"]
+
+    repl = c.post(
+        "/api/mobile/day-plan/replan",
+        json={"day": "2026-04-11", "reason": "meeting moved"},
+    )
+    assert repl.status_code == 200
+    repl_plan = repl.json()
+    assert repl_plan["day"] == "2026-04-11"
+    assert isinstance(repl_plan.get("blocks"), list)
+    assert repl_plan.get("plan_id")
+
+    acc = c.post(
+        "/api/mobile/day-plan/accept",
+        json={"day": "2026-04-11", "plan_id": repl_plan["plan_id"]},
+    )
+    assert acc.status_code == 200
+    assert acc.json().get("ok") is True
+
+    blk = repl_plan["blocks"][0]
+    ev = c.post(
+        "/api/mobile/day-plan/event",
+        json={"day": "2026-04-11", "block_id": blk["id"], "status": "completed", "reason": "executed"},
+    )
+    assert ev.status_code == 200
+    assert ev.json().get("ok") is True
+
+    get_plan = c.get("/api/mobile/day-plan", params={"day": "2026-04-11"})
+    assert get_plan.status_code == 200
+    assert get_plan.json().get("accepted") is True
+
+    mx = c.get("/api/mobile/assistant-metrics", params={"trailing_days": 14})
+    assert mx.status_code == 200
+    metrics = mx.json()
+    assert "plan_acceptance_rate" in metrics
+    assert "planned_vs_executed_adherence" in metrics

@@ -1,3 +1,4 @@
+import CoreFoundation
 import Foundation
 
 /// Mirrors `SovereigntyPayload` / `CockpitResponse` subset from FastAPI.
@@ -43,6 +44,8 @@ struct ScheduleDaySignalsDTO: Codable, Sendable {
 
 struct CockpitResponseDTO: Codable, Sendable {
     var date: String
+    /// Full purpose text from `identity.json`; client may show one random sentence on launch.
+    var identity_purpose: String = ""
     var google_calendar_connected: Bool = false
     var executive_score_percent: Double = 0
     var execution_day_summary: String = ""
@@ -60,6 +63,12 @@ struct CockpitResponseDTO: Codable, Sendable {
     var schedule_day_signals: ScheduleDaySignalsDTO = .init()
     var integrity_sentry_state: String = "NOMINAL"
     var ragstone_ledger: [String: AnyCodableJSON] = [:]
+}
+
+struct MobileDashboardDTO: Codable, Sendable {
+    var cockpit: CockpitResponseDTO
+    var ragstone_line: String = ""
+    var qbo_line: String = ""
 }
 
 struct PowerTrioSlotDTO: Codable, Sendable {
@@ -84,8 +93,39 @@ struct PowerTrioViewDTO: Codable, Sendable {
     var recon_day: String = ""
 }
 
+struct MobileReadinessDTO: Codable, Sendable {
+    var ok: Bool = true
+    var api_ready: Bool = true
+    var mobile_routes_ready: Bool = true
+    var api_key_required: Bool = false
+    var gemini_configured: Bool = false
+    var google_calendar_connected: Bool = false
+    var personal_calendar_configured: Bool = false
+    var personal_calendar_mode: String = "none"
+}
+
+struct MobileDayPlanBlockDTO: Codable, Sendable, Hashable {
+    var id: String = ""
+    var title: String = ""
+    var start_label: String = ""
+    var end_label: String = ""
+    var reason: String = ""
+    var status: String = "planned"
+}
+
+struct MobileDayPlanDTO: Codable, Sendable {
+    var plan_id: String = ""
+    var day: String = ""
+    var summary: String = ""
+    var reason: String = ""
+    var generated_by: String = "fallback"
+    var blocks: [MobileDayPlanBlockDTO] = []
+    var accepted: Bool = false
+    var updated_at: String = ""
+}
+
 /// Decodes arbitrary JSON object values for `ragstone_ledger` and similar dicts.
-enum AnyCodableJSON: Codable, Sendable {
+enum AnyCodableJSON: Codable, Sendable, Equatable {
     case string(String)
     case int(Int)
     case double(Double)
@@ -93,6 +133,44 @@ enum AnyCodableJSON: Codable, Sendable {
     case object([String: AnyCodableJSON])
     case array([AnyCodableJSON])
     case null
+
+    /// Bridges `JSONSerialization` / Python payloads that may not match strict `JSONDecoder` expectations.
+    init(jsonValue: Any) {
+        switch jsonValue {
+        case is NSNull:
+            self = .null
+        case let b as Bool:
+            self = .bool(b)
+        case let n as NSNumber:
+            if CFGetTypeID(n) == CFBooleanGetTypeID() {
+                self = .bool(n.boolValue)
+                return
+            }
+            let d = n.doubleValue
+            if d.isNaN || d.isInfinite {
+                self = .double(d)
+                return
+            }
+            let rounded = d.rounded()
+            if abs(d - rounded) < 1e-9, d >= Double(Int.min), d <= Double(Int.max) {
+                self = .int(Int(rounded))
+            } else {
+                self = .double(d)
+            }
+        case let i as Int:
+            self = .int(i)
+        case let d as Double:
+            self = .double(d)
+        case let s as String:
+            self = .string(s)
+        case let arr as [Any]:
+            self = .array(arr.map { AnyCodableJSON(jsonValue: $0) })
+        case let dict as [String: Any]:
+            self = .object(dict.mapValues { AnyCodableJSON(jsonValue: $0) })
+        default:
+            self = .string(String(describing: jsonValue))
+        }
+    }
 
     init(from decoder: Decoder) throws {
         let c = try decoder.singleValueContainer()
@@ -104,12 +182,20 @@ enum AnyCodableJSON: Codable, Sendable {
             self = .bool(v)
             return
         }
-        if let v = try? c.decode(Int.self) {
-            self = .int(v)
+        // Prefer Double before Int so fractional JSON numbers decode; whole numbers map to `.int` for display.
+        if let v = try? c.decode(Double.self) {
+            if !v.isNaN, !v.isInfinite {
+                let rounded = v.rounded()
+                if abs(v - rounded) < 1e-9, v >= Double(Int.min), v <= Double(Int.max) {
+                    self = .int(Int(rounded))
+                    return
+                }
+            }
+            self = .double(v)
             return
         }
-        if let v = try? c.decode(Double.self) {
-            self = .double(v)
+        if let v = try? c.decode(Int.self) {
+            self = .int(v)
             return
         }
         if let v = try? c.decode(String.self) {
